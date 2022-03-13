@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+    <package name="default" extends="struts-default">
+        <action name="pageAction" class="action.PageAction">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="selectCourse" class="action.CourseAction" method="select">
+            <result name="success">coursePage.jsp</result>
+        </action>
+        <action name="addCourse" class="action.CourseAction" method="add">
+            <result name="success">success.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="deleteCourse" class="action.CourseAction" method="delete">
+            <result name="success">coursePage.jsp</result>
+        </action>
+        <action name="alterStudent" class="action.StudentAction" method="alter">
+            <result name="success">success.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+    </package>
+</struts>
